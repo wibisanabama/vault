@@ -78,7 +78,7 @@
 
     <!-- Quick Actions Panel -->
     <div class="col-12 col-lg-4">
-        <div class="tremor-card h-100 d-flex flex-column justify-content-between">
+        <div class="tremor-card h-100">
             <div>
                 <h6 class="fw-bold text-dark mb-3">Aksi Cepat Operasional</h6>
                 <div class="d-grid gap-2">
@@ -97,10 +97,6 @@
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
-            </div>
-
-            <div class="mt-4 pt-3 border-top text-center text-muted" style="font-size: 0.8rem;">
-                <i class="bi bi-shield-check text-success me-1"></i> Vault Security Operating System v1.0
             </div>
         </div>
     </div>
