@@ -104,10 +104,6 @@
             </div>
 
             <div class="d-flex align-items-center gap-3">
-                <a href="{{ route('transaksi.create') }}" class="btn btn-primary btn-sm rounded-pill px-3 py-2 fw-semibold d-flex align-items-center gap-2">
-                    <i class="bi bi-plus-lg"></i> Titip Helm
-                </a>
-
                 <!-- User Profile Dropdown -->
                 <div class="dropdown">
                     <button class="btn btn-light rounded-pill border py-1 px-3 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
