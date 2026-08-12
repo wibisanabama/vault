@@ -4,14 +4,9 @@
 <div class="row justify-content-center">
     <div class="col-12 col-lg-8">
         <div class="tremor-card mb-4">
-            <div class="d-flex align-items-center justify-content-between pb-3 mb-4 border-bottom">
-                <div>
-                    <h5 class="fw-bold text-dark m-0"><i class="bi bi-box-arrow-in-down text-primary me-2"></i> Input Penitipan Helm</h5>
-                    <small class="text-muted">Isi data pelanggan dan helm untuk melakukan penitipan baru</small>
-                </div>
-                <a href="{{ route('transaksi.index') }}" class="btn btn-light border btn-sm rounded-pill">
-                    Kembali
-                </a>
+            <div class="pb-3 mb-4 border-bottom">
+                <h5 class="fw-bold text-dark m-0"><i class="bi bi-box-arrow-in-down text-primary me-2"></i> Input Penitipan Helm</h5>
+                <small class="text-muted">Isi data pelanggan dan helm untuk melakukan penitipan baru</small>
             </div>
 
             <!-- Lockers Alert Banner -->
