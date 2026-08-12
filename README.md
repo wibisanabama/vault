@@ -11,8 +11,8 @@ Vault adalah sistem manajemen penitipan helm berbasis web full-stack yang diranc
 3. [Struktur Database (ERD)](#struktur-database-erd)
 4. [Prasyarat Sistem](#prasyarat-sistem)
 5. [Instalasi dan Konfigurasi](#instalasi-dan-konfigurasi)
-7. [Pengujian Automasi](#pengujian-automasi)
-8. [Struktur Direktori Proyek](#struktur-direktori-proyek)
+6. [Pengujian Automasi](#pengujian-automasi)
+7. [Struktur Direktori Proyek](#struktur-direktori-proyek)
 
 ---
 
