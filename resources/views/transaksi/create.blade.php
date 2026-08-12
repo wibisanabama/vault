@@ -10,7 +10,7 @@
                     <small class="text-muted">Isi data pelanggan dan helm untuk melakukan penitipan baru</small>
                 </div>
                 <a href="{{ route('transaksi.index') }}" class="btn btn-light border btn-sm rounded-pill">
-                    <i class="bi bi-arrow-left"></i> Kembali
+                    Kembali
                 </a>
             </div>
 

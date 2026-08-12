@@ -11,7 +11,7 @@
             </div>
             <div class="d-flex gap-2">
                 <a href="{{ route('transaksi.index') }}" class="btn btn-light border rounded-pill px-3">
-                    <i class="bi bi-arrow-left me-1"></i> Kembali
+                    Kembali
                 </a>
                 <a href="{{ route('transaksi.struk', $transaksi->id) }}" target="_blank" class="btn btn-outline-primary rounded-pill px-3">
                     <i class="bi bi-printer me-1"></i> Cetak Struk

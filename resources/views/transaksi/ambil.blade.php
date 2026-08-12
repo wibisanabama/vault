@@ -10,7 +10,7 @@
                     <small class="text-muted">Hitung biaya akhir dan selesaikan transaksi penitipan</small>
                 </div>
                 <a href="{{ route('transaksi.show', $transaksi->id) }}" class="btn btn-light border btn-sm rounded-pill">
-                    <i class="bi bi-arrow-left"></i> Batal
+                    Batal
                 </a>
             </div>
 
