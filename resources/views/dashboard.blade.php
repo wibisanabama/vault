@@ -151,12 +151,12 @@
                         </td>
                         <td class="text-end">
                             @if($t->status === 'titip')
-                                <a href="{{ route('transaksi.ambil', $t->id) }}" class="btn btn-success btn-sm rounded-2">
-                                    <i class="bi bi-box-arrow-up-right"></i> Ambil
+                                <a href="{{ route('transaksi.ambil', $t->id) }}" class="btn btn-success btn-sm rounded-2 fw-semibold d-inline-flex align-items-center justify-content-center px-2.5 py-1 text-nowrap">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i> Ambil
                                 </a>
                             @else
-                                <a href="{{ route('transaksi.show', $t->id) }}" class="btn btn-light border btn-sm rounded-2">
-                                    <i class="bi bi-eye"></i> Detail
+                                <a href="{{ route('transaksi.show', $t->id) }}" class="btn btn-light border btn-sm rounded-2 d-inline-flex align-items-center justify-content-center px-2.5 py-1 text-nowrap">
+                                    <i class="bi bi-eye me-1"></i> Detail
                                 </a>
                             @endif
                         </td>

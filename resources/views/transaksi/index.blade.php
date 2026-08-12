@@ -105,16 +105,16 @@
                             @endif
                         </td>
                         <td class="text-end">
-                            <div class="d-flex justify-content-end gap-1">
-                                <a href="{{ route('transaksi.show', $t->id) }}" class="btn btn-light border btn-sm rounded-2" title="Detail">
+                            <div class="d-inline-flex align-items-center justify-content-end gap-1">
+                                <a href="{{ route('transaksi.show', $t->id) }}" class="btn btn-light border btn-sm rounded-2 d-inline-flex align-items-center justify-content-center px-2.5 py-1 text-nowrap" title="Detail">
                                     <i class="bi bi-eye"></i>
                                 </a>
                                 @if($t->status === 'titip')
-                                    <a href="{{ route('transaksi.ambil', $t->id) }}" class="btn btn-success btn-sm rounded-2 fw-semibold px-2">
+                                    <a href="{{ route('transaksi.ambil', $t->id) }}" class="btn btn-success btn-sm rounded-2 fw-semibold d-inline-flex align-items-center justify-content-center px-2.5 py-1 text-nowrap">
                                         <i class="bi bi-box-arrow-up-right me-1"></i> Ambil
                                     </a>
                                 @endif
-                                <a href="{{ route('transaksi.struk', $t->id) }}" target="_blank" class="btn btn-light border btn-sm rounded-2" title="Cetak Struk">
+                                <a href="{{ route('transaksi.struk', $t->id) }}" target="_blank" class="btn btn-light border btn-sm rounded-2 d-inline-flex align-items-center justify-content-center px-2.5 py-1 text-nowrap" title="Cetak Struk">
                                     <i class="bi bi-printer"></i>
                                 </a>
                             </div>
