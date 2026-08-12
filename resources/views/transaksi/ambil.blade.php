@@ -79,22 +79,22 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <input type="radio" class="btn-check" name="metode_bayar" id="bayar_tunai" value="tunai" checked>
-                            <label class="btn btn-outline-primary p-3 w-100 rounded-3 text-start d-flex align-items-center gap-3" for="bayar_tunai">
+                            <label class="btn btn-outline-primary payment-option-label p-3 w-100 h-100 rounded-3 text-start d-flex align-items-center gap-3" for="bayar_tunai">
                                 <i class="bi bi-cash-stack fs-2"></i>
                                 <div>
                                     <div class="fw-bold">Tunai / Cash</div>
-                                    <div class="fs-7 text-muted">Bayar langsung di kasir</div>
+                                    <div class="fs-7 payment-sub">Bayar langsung di kasir</div>
                                 </div>
                             </label>
                         </div>
 
                         <div class="col-6">
                             <input type="radio" class="btn-check" name="metode_bayar" id="bayar_ewallet" value="ewallet">
-                            <label class="btn btn-outline-primary p-3 w-100 rounded-3 text-start d-flex align-items-center gap-3" for="bayar_ewallet">
+                            <label class="btn btn-outline-primary payment-option-label p-3 w-100 h-100 rounded-3 text-start d-flex align-items-center gap-3" for="bayar_ewallet">
                                 <i class="bi bi-qr-code-scan fs-2"></i>
                                 <div>
                                     <div class="fw-bold">E-Wallet / QRIS</div>
-                                    <div class="fs-7 text-muted">GoPay, OVO, ShopeePay, Dana</div>
+                                    <div class="fs-7 payment-sub">GoPay, OVO, Dana, QRIS</div>
                                 </div>
                             </label>
                         </div>

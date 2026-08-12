@@ -287,6 +287,27 @@ body {
     color: #b91c1c;
 }
 
+/* Payment Option Buttons */
+.payment-option-label {
+    height: 100%;
+    transition: all 0.2s ease;
+}
+
+.payment-sub {
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.btn-check:checked + .payment-option-label {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+.btn-check:checked + .payment-option-label .payment-sub {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
 /* Print Receipt Styling */
 @media print {
     .vault-sidebar, .vault-navbar, .no-print {
