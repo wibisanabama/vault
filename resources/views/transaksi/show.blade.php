@@ -9,16 +9,16 @@
                 <h4 class="fw-bold text-dark m-0">Detail Transaksi {{ $transaksi->kode_transaksi }}</h4>
                 <small class="text-muted">Informasi lengkap penitipan dan pembayaran</small>
             </div>
-            <div class="d-flex gap-2">
-                <a href="{{ route('transaksi.index') }}" class="btn btn-light border rounded-pill px-3">
+            <div class="d-flex align-items-center gap-2">
+                <a href="{{ route('transaksi.index') }}" class="btn btn-light border rounded-pill px-3 py-2 text-nowrap fw-semibold">
                     Kembali
                 </a>
-                <a href="{{ route('transaksi.struk', $transaksi->id) }}" target="_blank" class="btn btn-outline-primary rounded-pill px-3">
+                <a href="{{ route('transaksi.struk', $transaksi->id) }}" target="_blank" class="btn btn-outline-primary rounded-pill px-3 py-2 text-nowrap fw-semibold">
                     <i class="bi bi-printer me-1"></i> Cetak Struk
                 </a>
                 @if($transaksi->status === 'titip')
-                    <a href="{{ route('transaksi.ambil', $transaksi->id) }}" class="btn btn-success rounded-pill px-4 fw-bold">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> Proses Ambil Helm
+                    <a href="{{ route('transaksi.ambil', $transaksi->id) }}" class="btn btn-success rounded-pill px-3 py-2 text-nowrap fw-semibold">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Ambil Helm
                     </a>
                 @endif
             </div>
