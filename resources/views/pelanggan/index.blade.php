@@ -66,48 +66,71 @@
                                     <i class="bi bi-pencil"></i>
                                 </button>
 
-                                <form action="{{ route('pelanggan.destroy', $p->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus data pelanggan ini?')">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-light border text-danger btn-sm rounded-2" title="Hapus">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </form>
-                            </div>
+                                 <button type="button" class="btn btn-light border text-danger btn-sm rounded-2" data-bs-toggle="modal" data-bs-target="#modalHapusPelanggan{{ $p->id }}" title="Hapus">
+                                     <i class="bi bi-trash"></i>
+                                 </button>
+                             </div>
 
-                            <!-- Modal Edit Pelanggan -->
-                            <div class="modal fade text-start" id="modalEditPelanggan{{ $p->id }}" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content rounded-4 border-0 shadow">
-                                        <div class="modal-header border-bottom">
-                                            <h5 class="modal-title fw-bold text-dark">Edit Data Pelanggan</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                        </div>
-                                        <form action="{{ route('pelanggan.update', $p->id) }}" method="POST">
-                                            @csrf
-                                            @method('PUT')
-                                            <div class="modal-body">
-                                                <div class="mb-3">
-                                                    <label class="form-label fw-semibold fs-7">Nama Pelanggan</label>
-                                                    <input type="text" name="nama" class="form-control rounded-3" value="{{ $p->nama }}" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label fw-semibold fs-7">Nomor WhatsApp / HP</label>
-                                                    <input type="text" name="no_hp" class="form-control rounded-3" value="{{ $p->no_hp }}" required>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label fw-semibold fs-7">Alamat / Catatan</label>
-                                                    <textarea name="alamat" class="form-control rounded-3" rows="2">{{ $p->alamat }}</textarea>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer border-top">
-                                                <button type="button" class="btn btn-light border rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
-                                                <button type="submit" class="btn btn-primary rounded-pill px-4 fw-bold">Simpan Perubahan</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                             <!-- Modal Edit Pelanggan -->
+                             <div class="modal fade text-start" id="modalEditPelanggan{{ $p->id }}" tabindex="-1">
+                                 <div class="modal-dialog modal-dialog-centered">
+                                     <div class="modal-content rounded-4 border-0 shadow">
+                                         <div class="modal-header border-bottom">
+                                             <h5 class="modal-title fw-bold text-dark">Edit Data Pelanggan</h5>
+                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                         </div>
+                                         <form action="{{ route('pelanggan.update', $p->id) }}" method="POST">
+                                             @csrf
+                                             @method('PUT')
+                                             <div class="modal-body">
+                                                 <div class="mb-3">
+                                                     <label class="form-label fw-semibold fs-7">Nama Pelanggan</label>
+                                                     <input type="text" name="nama" class="form-control rounded-3" value="{{ $p->nama }}" required>
+                                                 </div>
+                                                 <div class="mb-3">
+                                                     <label class="form-label fw-semibold fs-7">Nomor WhatsApp / HP</label>
+                                                     <input type="text" name="no_hp" class="form-control rounded-3" value="{{ $p->no_hp }}" required>
+                                                 </div>
+                                                 <div class="mb-3">
+                                                     <label class="form-label fw-semibold fs-7">Alamat / Catatan</label>
+                                                     <textarea name="alamat" class="form-control rounded-3" rows="2">{{ $p->alamat }}</textarea>
+                                                 </div>
+                                             </div>
+                                             <div class="modal-footer border-top">
+                                                 <button type="button" class="btn btn-light border rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                                                 <button type="submit" class="btn btn-primary rounded-pill px-4 fw-bold">Simpan Perubahan</button>
+                                             </div>
+                                         </form>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <!-- Modal Hapus Pelanggan -->
+                             <div class="modal fade text-start" id="modalHapusPelanggan{{ $p->id }}" tabindex="-1">
+                                 <div class="modal-dialog modal-dialog-centered">
+                                     <div class="modal-content rounded-4 border-0 shadow">
+                                         <div class="modal-header border-bottom">
+                                             <h5 class="modal-title fw-bold text-dark">Konfirmasi Hapus Pelanggan</h5>
+                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                         </div>
+                                         <div class="modal-body text-center py-4">
+                                             <div class="text-danger mb-3">
+                                                 <i class="bi bi-exclamation-triangle-fill display-4"></i>
+                                             </div>
+                                             <h6 class="fw-bold text-dark">Apakah Anda yakin ingin menghapus data pelanggan <strong>{{ $p->nama }}</strong>?</h6>
+                                             <p class="text-muted fs-7 mb-0">Tindakan ini tidak dapat dibatalkan.</p>
+                                         </div>
+                                         <div class="modal-footer border-top justify-content-center">
+                                             <button type="button" class="btn btn-light border rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                                             <form action="{{ route('pelanggan.destroy', $p->id) }}" method="POST" class="d-inline">
+                                                 @csrf
+                                                 @method('DELETE')
+                                                 <button type="submit" class="btn btn-danger rounded-pill px-4 fw-bold">Ya, Hapus Data</button>
+                                             </form>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
                         </td>
                     </tr>
                 @empty

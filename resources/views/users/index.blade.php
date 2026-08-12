@@ -54,13 +54,9 @@
                                     <i class="bi bi-pencil"></i>
                                 </button>
                                 @if($u->id !== auth()->id())
-                                    <form action="{{ route('users.destroy', $u->id) }}" method="POST" onsubmit="return confirm('Hapus akun {{ $u->name }}?')">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-light border text-danger btn-sm rounded-2" title="Hapus">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </form>
+                                    <button type="button" class="btn btn-light border text-danger btn-sm rounded-2" data-bs-toggle="modal" data-bs-target="#modalHapusUser{{ $u->id }}" title="Hapus">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
                                 @endif
                             </div>
 
@@ -104,6 +100,35 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Modal Hapus User -->
+                            @if($u->id !== auth()->id())
+                                <div class="modal fade text-start" id="modalHapusUser{{ $u->id }}" tabindex="-1">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content rounded-4 border-0 shadow">
+                                            <div class="modal-header border-bottom">
+                                                <h5 class="modal-title fw-bold text-dark">Konfirmasi Hapus User</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            </div>
+                                            <div class="modal-body text-center py-4">
+                                                <div class="text-danger mb-3">
+                                                    <i class="bi bi-exclamation-triangle-fill display-4"></i>
+                                                </div>
+                                                <h6 class="fw-bold text-dark">Apakah Anda yakin ingin menghapus akun <strong>{{ $u->name }}</strong>?</h6>
+                                                <p class="text-muted fs-7 mb-0">Tindakan ini tidak dapat dibatalkan.</p>
+                                            </div>
+                                            <div class="modal-footer border-top justify-content-center">
+                                                <button type="button" class="btn btn-light border rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                                                <form action="{{ route('users.destroy', $u->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger rounded-pill px-4 fw-bold">Ya, Hapus Akun</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

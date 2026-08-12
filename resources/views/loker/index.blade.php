@@ -62,11 +62,7 @@
                                 </li>
                                 @if($l->status === 'tersedia')
                                     <li>
-                                        <form action="{{ route('loker.destroy', $l->id) }}" method="POST" onsubmit="return confirm('Hapus loker {{ $l->nomor_loker }}?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="dropdown-item text-danger fs-7">Hapus</button>
-                                        </form>
+                                        <button type="button" class="dropdown-item text-danger fs-7" data-bs-toggle="modal" data-bs-target="#modalHapusLoker{{ $l->id }}">Hapus Loker</button>
                                     </li>
                                 @endif
                             </ul>
@@ -120,6 +116,33 @@
                                 <button type="submit" class="btn btn-primary rounded-pill px-4 fw-bold">Simpan</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Hapus Loker -->
+            <div class="modal fade text-start" id="modalHapusLoker{{ $l->id }}" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content rounded-4 border-0 shadow">
+                        <div class="modal-header border-bottom">
+                            <h5 class="modal-title fw-bold text-dark">Konfirmasi Hapus Loker</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center py-4">
+                            <div class="text-danger mb-3">
+                                <i class="bi bi-exclamation-triangle-fill display-4"></i>
+                            </div>
+                            <h6 class="fw-bold text-dark">Apakah Anda yakin ingin menghapus <strong>Loker {{ $l->nomor_loker }}</strong>?</h6>
+                            <p class="text-muted fs-7 mb-0">Tindakan ini tidak dapat dibatalkan.</p>
+                        </div>
+                        <div class="modal-footer border-top justify-content-center">
+                            <button type="button" class="btn btn-light border rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                            <form action="{{ route('loker.destroy', $l->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger rounded-pill px-4 fw-bold">Ya, Hapus Loker</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
