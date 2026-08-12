@@ -66,7 +66,7 @@
                 <label for="email" class="form-label fw-semibold fs-7 text-secondary">Email Address</label>
                 <div class="input-group">
                     <span class="input-group-text bg-light border-end-0 text-muted rounded-start-3"><i class="bi bi-envelope"></i></span>
-                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username" class="form-control bg-light border-start-0 rounded-end-3" placeholder="admin@example.com">
+                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username" class="form-control bg-light border-start-0 rounded-end-3" placeholder="email@domain.com">
                 </div>
             </div>
 
