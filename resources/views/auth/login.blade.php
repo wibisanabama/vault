@@ -89,7 +89,7 @@
 
             <!-- Submit Button -->
             <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold fs-6 shadow-sm">
-                Masuk Ke Sistem <i class="bi bi-arrow-right me-1"></i>
+                Masuk Ke Sistem
             </button>
         </form>
 
