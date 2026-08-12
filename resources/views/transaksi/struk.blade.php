@@ -119,6 +119,7 @@
 
         <div class="receipt-card">
             <div class="receipt-header">
+                <img src="{{ asset('images/logo.png') }}" alt="Vault Logo" style="height: 38px; width: auto; margin-bottom: 6px;">
                 <div class="receipt-title">VAULT</div>
                 <div class="receipt-sub">LAYANAN PENITIPAN HELM SECURE</div>
                 <div class="receipt-sub">Jl. Utama No. 88 | CS: 0812-3456-7890</div>

@@ -7,6 +7,9 @@
 
     <title>{{ $title ?? 'Dashboard' }} - Vault Penitipan Helm</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -27,9 +30,7 @@
     <!-- Sidebar -->
     <aside class="vault-sidebar">
         <div class="vault-brand">
-            <div class="vault-brand-icon">
-                <i class="bi bi-shield-lock-fill"></i>
-            </div>
+            <img src="{{ asset('images/logo.png') }}" alt="Vault Logo" class="vault-brand-logo">
             <div>
                 <div>VAULT</div>
                 <div style="font-size: 0.65rem; font-weight: 500; color: #94a3b8; letter-spacing: 0.05em;">PENITIPAN HELM</div>

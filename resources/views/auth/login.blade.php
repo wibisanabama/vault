@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login - Vault Penitipan Helm</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -34,9 +36,7 @@
 <body>
     <div class="login-card">
         <div class="text-center mb-4">
-            <div class="d-inline-flex align-items-center justify-content-center bg-primary text-white rounded-3 mb-3 shadow" style="width: 54px; height: 54px; font-size: 1.75rem;">
-                <i class="bi bi-shield-lock-fill"></i>
-            </div>
+            <img src="{{ asset('images/logo.png') }}" alt="Vault Logo" class="mb-3" style="max-height: 64px; width: auto; object-fit: contain;">
             <h3 class="fw-extrabold text-dark m-0">VAULT</h3>
             <p class="text-muted fs-7 mt-1">Sistem Penitipan Helm Secure Operating System</p>
         </div>
