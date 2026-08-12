@@ -114,7 +114,7 @@
 <body>
     <div>
         <div class="no-print">
-            <button class="btn-print" onclick="window.print()">🖨️ Cetak Struk Sekarang</button>
+            <button class="btn-print" onclick="window.print()">Cetak Struk Sekarang</button>
         </div>
 
         <div class="receipt-card">
