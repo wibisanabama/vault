@@ -93,12 +93,7 @@
             </button>
         </form>
 
-        <!-- Demo Accounts Hint -->
-        <div class="mt-4 pt-3 border-top text-center" style="font-size: 0.75rem; color: #64748b;">
-            <div class="fw-bold mb-1 text-dark">Akun Demo Default:</div>
-            <div><strong>Admin:</strong> admin@example.com | <strong>pass:</strong> password</div>
-            <div><strong>Petugas:</strong> staff@example.com | <strong>pass:</strong> password</div>
-        </div>
+
     </div>
 </body>
 </html>
