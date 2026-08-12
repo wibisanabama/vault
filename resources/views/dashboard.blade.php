@@ -82,19 +82,16 @@
             <div>
                 <h6 class="fw-bold text-dark mb-3">Aksi Cepat Operasional</h6>
                 <div class="d-grid gap-2">
-                    <a href="{{ route('transaksi.create') }}" class="btn btn-primary py-3 rounded-3 fw-semibold text-start d-flex align-items-center justify-content-between">
+                    <a href="{{ route('transaksi.create') }}" class="btn btn-primary py-3 rounded-3 fw-semibold text-start d-flex align-items-center">
                         <span><i class="bi bi-plus-circle-fill me-2 fs-5"></i> Titip Helm Baru</span>
-                        <i class="bi bi-arrow-right"></i>
                     </a>
 
-                    <a href="{{ route('transaksi.index', ['status' => 'titip']) }}" class="btn btn-light border py-3 rounded-3 fw-semibold text-start d-flex align-items-center justify-content-between text-dark">
+                    <a href="{{ route('transaksi.index', ['status' => 'titip']) }}" class="btn btn-light border py-3 rounded-3 fw-semibold text-start d-flex align-items-center text-dark">
                         <span><i class="bi bi-box-arrow-up-right me-2 text-primary fs-5"></i> Proses Ambil Helm</span>
-                        <i class="bi bi-arrow-right"></i>
                     </a>
 
-                    <a href="{{ route('loker.index') }}" class="btn btn-light border py-3 rounded-3 fw-semibold text-start d-flex align-items-center justify-content-between text-dark">
+                    <a href="{{ route('loker.index') }}" class="btn btn-light border py-3 rounded-3 fw-semibold text-start d-flex align-items-center text-dark">
                         <span><i class="bi bi-grid-3x3-gap-fill me-2 text-warning fs-5"></i> Cek Grid Loker</span>
-                        <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -110,7 +107,7 @@
             <small class="text-muted">5 aktivitas penitipan helm terkini</small>
         </div>
         <a href="{{ route('transaksi.index') }}" class="btn btn-link btn-sm text-decoration-none fw-semibold">
-            Lihat Semua Transaksi <i class="bi bi-arrow-right"></i>
+            Lihat Semua Transaksi
         </a>
     </div>
 
