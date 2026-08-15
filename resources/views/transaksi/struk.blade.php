@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Struk {{ $transaksi->kode_transaksi }} - Vault</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}">
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
